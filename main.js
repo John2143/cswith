@@ -67,7 +67,6 @@ var createCID = function(players, cb){
 		var partial = Number(split[1]) + Number(split[2])*2;
 
 		ply.cid = addnums("76561197960265728", String(partial));
-		console.log(ply.name  + new Array(30 - ply.name.length).join(" ") + ply.cid + " => " + ply.sid);
 	}
 };
 var getData = function(players, cb){
