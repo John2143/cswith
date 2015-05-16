@@ -77,7 +77,7 @@ var getData = function(players, cb){
 
 	var reqs = 0;
 	var testReqs = function(){
-		if(++reqs >= 2 + players.length)
+		if(++reqs >= 2 + players.length*2)
 			cb();
 	}
 	GET("http://api.steampowered.com/ISteamUser/GetPlayerBans/v1/" + req, function(err, data){
@@ -99,7 +99,7 @@ var getData = function(players, cb){
 		testReqs();
 	});
 	for(i in players){
-		var ply= players[i];
+		var ply = players[i];
 		GET("http://api.steampowered.com/ISteamUserStats/GetUserStatsForGame/v0002/?appid=" + cfg.gameid + "&key=" + cfg.key + "&steamid=" + ply.cid, function(player, err, data){
 			if(err){console.log("Stats failed for" + ply.name + "-" + ply.cid); testReqs(); return;}
 			player.gameinfo = data.playerstats;
@@ -114,6 +114,29 @@ var getData = function(players, cb){
 
 			testReqs();
 		}.bind(undefined, ply));
+		GET("http://api.steampowered.com/ISteamUser/GetFriendList/v0001/?relationship=friend&key=" + cfg.key + "&steamid=" + ply.cid, function(player, err, data){
+			if(err){console.log("friends failed for" + ply.name + "-" + ply.cid); testReqs(); return;}
+			player.friends = data.friendslist && data.friendslist.friends || [];
+
+			for(var k in player.friends){
+				var partialfriend = player.friends[k];
+				for(var v in players){
+					var playerfriend = players[v];
+					if(partialfriend.steamid == playerfriend.cid){
+						//add it to both because if someone has a private profile
+						//it will still need to add them as a friend to other people
+						//and vice versa
+						if(player.friendsig.indexOf(playerfriend.cid) == -1)
+							player.friendsig.push(playerfriend.cid)
+						if(playerfriend.friendsig.indexOf(player.cid) == -1)
+							playerfriend.friendsig.push(player.cid);
+					}
+				}
+			}
+
+			testReqs();
+		}.bind(undefined, ply));
+		ply.friendsig = [];
 	}
 };
 

@@ -11,18 +11,68 @@ var createWarn = function(pct, a, b, side){//side == false = fade out
 		).RGB(side ? clampct : 1-clampct) +
 	"\">";
 };
+var image = function(link, x, y){
+	var xy = "";
+	if (x&&y){
+		xy = "width = \"" + x + "\"" +
+		"height = \"" + y + "\"";
+	}
+	return "<img src=\"" + link + "\"" + xy + "/>";
+}
 
-var createPlayer = function(ply){
+var createPlayer = function(ply, players, countries){
 	var t = [];
-	t.push("<td><img src=\"" + ply.summary.avatarmedium + "\" /></td>");
+	var sum = ply.summary;
+
+	t.push("<td>" + image(sum.avatarmedium) + "</td>");
 	t.push("<td><a href=\"http://steamcommunity.com/profiles/" + ply.cid + "\">" + ply.name + "</a></td>");
-	t.push("<td>" + (ply.summary.loccountrycode || "?") + "-" + (ply.summary.locstatecode || "?") + "</td>");
+	var country, state, city;
+	var temp;
+	var locdata;
+	var doLoc = function(temp){
+		locdata = {
+			coords: temp.coordinates,
+			acc: temp.coordinates_accuracy_level,
+		};
+	};
+	if(sum.loccountrycode){
+		temp = countries[sum.loccountrycode];
+		doLoc(temp);
+		country = temp.name;
+		if(sum.locstatecode){
+			temp = temp.states[sum.locstatecode];
+			doLoc(temp);
+			state = temp.name;
+			if(sum.loccityid){
+				temp = temp.cities[sum.loccityid];
+				doLoc(temp);
+				city = temp.name;
+			}
+		}
+	}
+	t.push("<td>" +
+		(country || "Unknown") + "<br/>" +
+		(state || "-") + "<br/>" +
+		(city || "-") + "<br/>" +
+	"</td>");
+
 	t.push(
 		"<td class=" +
 		((ply.bans.NumberOfGameBans + ply.bans.NumberOfVACBans) > 0 ? "hasban" : "noban") +
-		">" + ply.bans.NumberOfGameBans + "/" + ply.bans.NumberOfVACBans + "</td>");
+		">" + ply.bans.NumberOfGameBans + "/" + ply.bans.NumberOfVACBans + "</td>"
+	);
 
 	t.push("<td>" + ply.bans.EconomyBan + "</td>");
+
+	t.push("<td>");
+	for(var i in ply.friendsig){
+		for(var v in players){
+			if(players[v].cid == ply.friendsig[i]){
+				t.push(image(players[v].summary.avatar, "20px", "20px"));
+			}
+		}
+	}
+	t.push("</td>");
 
 	var gi = ply.gameinfo;
 	if(gi){
@@ -43,6 +93,7 @@ var createPlayer = function(ply){
 			"<td>" +
 			gi.stats.total_planted_bombs + "<br/>" +
 			gi.stats.total_defused_bombs + "<br/>" +
+			(gi.stats["GI.lesson.csgo_hostage_lead_to_hrz"] || "?") + "<br/>" +
 			gi.stats.total_mvps +
 			"</td>"
 		);
@@ -92,6 +143,8 @@ var createPlayer = function(ply){
 exports.createPage = function(players, supressraw){
 	if(!supressraw)
 		fs.writeFileSync(__dirname + "/rawplys.txt", JSON.stringify(players, null, "  "));
+
+	var countries = JSON.parse(fs.readFileSync("./steam_countries.min.json"));
 	var html = ["<html><head>"];
 
 	html.push("<link rel=\"stylesheet\" type=\"text/css\" href=\"./site.css\">");
@@ -104,9 +157,10 @@ exports.createPage = function(players, supressraw){
 	html.push("<th>Location</th>");
 	html.push("<th>Game/VAC bans</th>");
 	html.push("<th>Economy bans</th>");
+	html.push("<th>Friends</th>");
 	html.push("<th>K/D</th>");
 	html.push("<th>KDR</th>");
-	html.push("<th>P/D/MVP*</th>");
+	html.push("<th>P/D/HR/MVP*</th>");
 	html.push("<th>AK&M4/AWP/P90/DEAG&57</th>");
 	html.push("<th>Prefrence</th>");
 	html.push("<th>HS/HS%</th>");
@@ -115,11 +169,12 @@ exports.createPage = function(players, supressraw){
 	for(var i in players){
 		html.push("<tr>");
 		var ply = players[i];
-		html = html.concat(createPlayer(ply));
+		html = html.concat(createPlayer(ply, players, countries));
 		html.push("</tr>");
 	}
 	html.push("</table>");
 	html.push("</body></html>");
+	contries = null; //this is a lot of data that can just be gc'd
 
 	fs.writeFileSync(__dirname + "/site.html", html.join(""));
 };
