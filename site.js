@@ -35,21 +35,28 @@ var createPlayer = function(ply, players, countries){
 			acc: temp.coordinates_accuracy_level,
 		};
 	};
-	if(sum.loccountrycode){
-		temp = countries[sum.loccountrycode];
-		doLoc(temp);
-		country = temp.name;
-		if(sum.locstatecode){
-			temp = temp.states[sum.locstatecode];
+	var processContries = function(){//TODO temporary fix
+		if(sum.loccountrycode){
+			temp = countries[sum.loccountrycode];
+			if(!temp) return;
 			doLoc(temp);
-			state = temp.name;
-			if(sum.loccityid){
-				temp = temp.cities[sum.loccityid];
+			country = temp.name;
+			if(sum.locstatecode){
+				temp = temp.states[sum.locstatecode];
+				if(!temp) return;
 				doLoc(temp);
-				city = temp.name;
+				state = temp.name;
+				if(sum.loccityid){
+					temp = temp.cities[sum.loccityid];
+					if(!temp) return;
+					doLoc(temp);
+					city = temp.name;
+				}
 			}
 		}
-	}
+	};
+	processContries();
+
 	t.push("<td>" +
 		(country || "Unknown") + "<br/>" +
 		(state || "-") + "<br/>" +
