@@ -18,7 +18,7 @@ var image = function(link, x, y){
 		"height = \"" + y + "\"";
 	}
 	return "<img src=\"" + link + "\"" + xy + "/>";
-}
+};
 
 var createPlayer = function(ply, players, countries){
 	var t = [];

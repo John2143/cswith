@@ -1,6 +1,7 @@
 var watchr = require('watchr');
 var http = require("http");
 var fs = require("fs");
+var open = require("open");
 var cfg = require("./config.js");
 var site = require("./site.js");
 
@@ -9,6 +10,13 @@ var site = require("./site.js");
 		//1: condump###
 		//2: ###
 var REG_TEST_PATH = /.*(condump(\d{3,}))\.txt/;
+
+	//This will return
+		//0: Damage log with words
+		//1: Name
+		//2: Damage
+		//3: # of Hits
+var REG_TEST_DMG = /Damage Given to "(.+)" \- (\d+) in (\d+) hits?/g;
 
 	//This will return:
 		//1: Name
@@ -19,25 +27,26 @@ var REG_TEST_PLY = /#\s*\d+\s+\d+\s+"(.+)"\s+(STEAM_\d:\d:\d+)\s+\d\d:\d\d\s+(\d
 var changeListener = function(type, path, newstat, oldstat){
 	if(!(type == "update" || type == "create"))
 		return;
-	var pathTest = REG_TEST_PATH.exec(path);
-	if (pathTest === null)
-		return;
+	var pathTest, damageTest;
 
-
-	const text = fs.readFileSync(path, {encoding: "utf-8"}) //TODO check if cstrike uses utf8
-	var players = [];
-	var ply;
-	while((ply = REG_TEST_PLY.exec(text)) !== null){
-		players.push({
-			name: ply[1],
-			sid: ply[2],
-			ping: ply[3],
+	if (pathTest = REG_TEST_PATH.exec(path)){
+		const text = fs.readFileSync(path, {encoding: "utf-8"}) //TODO check if cstrike uses utf8
+		var players = [];
+		var ply;
+		while((ply = REG_TEST_PLY.exec(text)) !== null){
+			players.push({
+				name: ply[1],
+				sid: ply[2],
+				ping: ply[3],
+			});
+		}
+		createCID(players);
+		getData(players, function(){ //needs to be async for speed
+			console.log("Data dumped, creating page.");
+			site.createPage(players);
+			open("./site.html");
 		});
 	}
-	createCID(players);
-	getData(players, function(){ //needs to be async for speed
-		site.createPage(players);
-	});
 };
 
 var addnums = function(a, b){//64 bit addition emulation, a >= b
@@ -127,7 +136,7 @@ var getData = function(players, cb){
 						//it will still need to add them as a friend to other people
 						//and vice versa
 						if(player.friendsig.indexOf(playerfriend.cid) == -1)
-							player.friendsig.push(playerfriend.cid)
+							player.friendsig.push(playerfriend.cid);
 						if(playerfriend.friendsig.indexOf(player.cid) == -1)
 							playerfriend.friendsig.push(player.cid);
 					}
@@ -151,7 +160,7 @@ watchr.watch({
 			console.log(E);
 		}
 	}},
-    next: function(err,watchers){
+    next: function(err, watchers){
         if (err)
             return console.log("There was an error", err);
 
@@ -161,27 +170,26 @@ watchr.watch({
     },
 	watching: function(err, is){
 		if(is)
-			console.log("ayy lmao")
+			console.log("ayy lmao");
 	},
 	error: function(err){
-		console.log(err)
+		console.log(err);
 	}
 });
 var GET = function(url, cb){
 	return http.get(url, function(resp){
-		var text = [];
+		var text = "";
 		resp.on('data', function(d){
-			text.push(d);
+			text += d;
 		});
 		resp.setEncoding("utf-8");
 		resp.on("end", function(){
-			text = text.join("");
 			var err = false;
 			try{
 				text = JSON.parse(text);
 			}catch(e){
 				console.log("Failed to parse json from GET, is steam down?");
-				err = true
+				err = true;
 			}
 			cb(err, text);
 		});

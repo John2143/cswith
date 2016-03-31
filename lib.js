@@ -2,7 +2,7 @@ var clamp = function(x,a,b) {
 	return Math.max(a, Math.min(x, b));
 };
 var lerp = function(a, b, t) {
-	return a + clamp(t, 0,1) * (b - a);
+	return a + clamp(t, 0, 1) * (b - a);
 };
 var Color = function(r, g, b) { //Color library
 	if(g === undefined){
