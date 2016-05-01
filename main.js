@@ -188,7 +188,7 @@ var GET = function(url, cb){
 			try{
 				text = JSON.parse(text);
 			}catch(e){
-				console.log("Failed to parse json from GET, is steam down?");
+				console.log("Failed to parse json from GET: " + text);
 				err = true;
 			}
 			cb(err, text);

@@ -20,6 +20,13 @@ var image = function(link, x, y){
 	return "<img src=\"" + link + "\"" + xy + "/>";
 };
 
+var humanReadable = function(x){
+	if(x < 1000) return x;
+	x = x / 1000;
+	if(x < 10) return x.toFixed(1) + "k";
+	if(x > 10) return x.toFixed(0) + "k";
+}
+
 var createPlayer = function(ply, players, countries){
 	var t = [];
 	var sum = ply.summary;
@@ -65,17 +72,22 @@ var createPlayer = function(ply, players, countries){
 
 	t.push(
 		"<td class=" +
-		((ply.bans.NumberOfGameBans + ply.bans.NumberOfVACBans) > 0 ? "hasban" : "noban") +
-		">" + ply.bans.NumberOfGameBans + "/" + ply.bans.NumberOfVACBans + "</td>"
+		((
+			(ply.bans.NumberOfGameBans + ply.bans.NumberOfVACBans) > 0 ||
+			ply.bans.EconomyBan !== "none"
+		) ? "hasban" : "noban") +
+		">" + ply.bans.NumberOfGameBans + " Game<br>" + ply.bans.NumberOfVACBans + " VAC<br>"+
+		"econ: " + ply.bans.EconomyBan +
+		"</td>"
 	);
-
-	t.push("<td>" + ply.bans.EconomyBan + "</td>");
 
 	t.push("<td>");
 	for(var i in ply.friendsig){
 		for(var v in players){
 			if(players[v].cid == ply.friendsig[i]){
 				t.push(image(players[v].summary.avatar, "20px", "20px"));
+				t.push(players[v].name);
+				t.push("<br>");
 			}
 		}
 	}
@@ -90,8 +102,8 @@ var createPlayer = function(ply, players, countries){
 
 		t.push(
 			"<td>" +
-			kills+ "<br>" +
-			deaths + " " +
+			humanReadable(kills) + " kills<br>" +
+			humanReadable(deaths) + " deaths " +
 			"</td>"
 		);
 		var kdr = (kills/deaths);
@@ -104,31 +116,39 @@ var createPlayer = function(ply, players, countries){
 			gi.stats.total_mvps +
 			"</td>"
 		);
-		var ak, m4, awp, p90, deagle, fiveseven;
-		ak        = gi.stats.total_kills_ak47;
-		m4        = gi.stats.total_kills_m4a1;
-		awp       = gi.stats.total_kills_awp;
-		p90       = gi.stats.total_kills_p90;
-		aug       = gi.stats.total_kills_aug;
-		deagle    = gi.stats.total_kills_deagle;
-		fiveseven = gi.stats.total_kills_fiveseven;
-
+		
+		//All weapon kills in numbers
+		var w = {};
+		w.ak        = gi.stats.total_kills_ak47;
+		w.m4        = gi.stats.total_kills_m4a1;
+		w.awp       = gi.stats.total_kills_awp;
+		w.p90       = gi.stats.total_kills_p90;
+		w.aug       = gi.stats.total_kills_aug;
+		w.deagle    = gi.stats.total_kills_deagle;
+		w.fiveseven = gi.stats.total_kills_fiveseven;
+		
+		//The display weapons, with possible abbreviation
+		var neww = {};
+		for(var i in w){
+			neww[i] = humanReadable(w[i]);
+		}
+		
 		t.push(
 			"<td>" +
-			ak + "+" + m4 + " (" + ((ak+m4)*100/kills).toPrecision(2) + "%)<br/>" +
-			awp + " (" + (awp*100/kills).toPrecision(2) + "%)<br/>" +
-			p90 + " (" + (p90*100/kills).toPrecision(2) + "%)<br/>" +
-			deagle + "+" + fiveseven + " (" + ((deagle+fiveseven)*100/kills).toPrecision(2) + "%)" +
+			neww.ak + "+" + neww.m4 + " (" + ((w.ak+w.m4)*100/kills).toPrecision(2) + "%)<br/>" +
+			neww.awp + " (" + (w.awp*100/kills).toPrecision(2) + "%)<br/>" +
+			neww.p90 + " (" + (w.p90*100/kills).toPrecision(2) + "%)<br/>" +
+			neww.deagle + "+" + neww.fiveseven + " (" + ((w.deagle+w.fiveseven)*100/kills).toPrecision(2) + "%)" +
 			"</td>"
 		);
 		var prefrence = "Unknown";
-		if (awp/kills > .10)
+		if (w.awp/kills > .10)
 			prefrence = "Awper";
-		if((ak+m4)/kills > .35)
+		if((w.ak+w.m4)/kills > .35)
 			prefrence = "Rifler";
-		if(p90/kills > .2)
+		if(w.p90/kills > .2)
 			prefrence = "P90";
-		if((deagle+fiveseven)/kills > .1)
+		if((w.deagle+w.fiveseven)/kills > .1)
 			prefrence = "Pistols";
 
 		t.push("<td>" + prefrence + "</td>");
@@ -148,8 +168,12 @@ var createPlayer = function(ply, players, countries){
 };
 
 exports.createPage = function(players, supressraw){
-	if(!supressraw)
+	if(!supressraw && players != null){
 		fs.writeFileSync(__dirname + "/rawplys.txt", JSON.stringify(players, null, "  "));
+	}
+	if(players == null){
+		players = JSON.parse(fs.readFileSync(__dirname + "/rawplys.txt"));
+	}
 
 	var countries = JSON.parse(fs.readFileSync("./steam_countries.min.json"));
 	var html = ["<html><head>"];
@@ -162,8 +186,7 @@ exports.createPage = function(players, supressraw){
 	html.push("<th>Avatar</th>");
 	html.push("<th>Name</th>");
 	html.push("<th>Location</th>");
-	html.push("<th>Game/VAC bans</th>");
-	html.push("<th>Economy bans</th>");
+	html.push("<th>Bans</th>");
 	html.push("<th>Friends</th>");
 	html.push("<th>K/D</th>");
 	html.push("<th>KDR</th>");
@@ -185,3 +208,7 @@ exports.createPage = function(players, supressraw){
 
 	fs.writeFileSync(__dirname + "/site.html", html.join(""));
 };
+
+if(require.main === module){
+	exports.createPage(null, true);
+}
