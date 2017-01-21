@@ -1,0 +1,585 @@
+Failed to load gamerulescvars.txt, game rules cvars might not be reported to management tools.
+Parent cvar in client.dll not allowed (mp_endmatch_votenextleveltime)
+Parent cvar in client.dll not allowed (mp_verbose_changelevel_spew)
+Parent cvar in client.dll not allowed (cl_remove_old_ugc_downloads)
+maxplayers set to 64
+Steam config directory: D:\Steam\steamapps\common\Counter-Strike Global Offensive\platform\config
+--- Missing Vgui material vgui/store/store_item_bg
+--- Missing Vgui material vgui/store/store_item_bg_highlight
+--- Missing Vgui material vgui/store/store_item_sel_bg
+--- Missing Vgui material vgui/store/store_item_pickup_bg
+--- Missing Vgui material vgui/store/store_preview_bg
+--- Missing Vgui material vgui/store/store_bottom_bar_button_bg
+--- Missing Vgui material vgui/store/store_bottom_bar_button_highlight_bg
+--- Missing Vgui material vgui/store/store_default_dialog
+--- Missing Vgui material vgui/store/store_backpack_bg
+--- Missing Vgui material vgui/store/store_backpack_bg_highlight
+--- Missing Vgui material vgui/store/store_backpack_bg_highlight
+--- Missing Vgui material vgui/store/store_discount_corner
+--- Missing Vgui material vgui/store/store_preview_bg
+--- Missing Vgui material vgui/store/store_tooltip_bg
+--- Missing Vgui material vgui/store/store_tab_selected
+--- Missing Vgui material vgui/store/store_tab_unselected
+--- Missing Vgui material vgui/btn_econ_blue
+--- Missing Vgui material vgui/store/button_econ_blue_over
+--- Missing Vgui material vgui/store/store_backpack_bg
+--- Missing Vgui material vgui/store/store_backpack_bg_highlight
+--- Missing Vgui material vgui/store/store_backpack_bg_highlight
+Unknown command "cl_thirdperson"
+Unknown command "tr_best_course_time"
+Unknown command "tr_completed_training"
+Unknown command "weapon_accuracy_logging"
+Unknown command "cl_teamid_min"
+Unknown command "cl_teamid_max"
+Can't use cheat cvar cl_teamid_overhead in multiplayer, unless the server has sv_cheats set to 1.
+Can't use cheat cvar cl_teamid_overhead_maxdist in multiplayer, unless the server has sv_cheats set to 1.
+Unknown command "cl_thirdperson"
+Unknown command "tr_best_course_time"
+Unknown command "tr_completed_training"
+Unknown command "weapon_accuracy_logging"
+Telling Steam it is safe to udpate the app
+Failed to read the default inventory image file (materials/icons/inventory_icon_quest.vtf)
+Failed to read the default inventory image file (materials/icons/inventory_icon_campaign.vtf)
+Failed to read the default inventory image file (materials/icons/inventory_icon_campaign.vtf)
+Failed to read the default inventory image file (materials/icons/inventory_icon_campaign.vtf)
+Failed to read the default inventory image file (materials/icons/inventory_icon_campaign.vtf)
+SF GetLootListItemIdByIndex called on an item with no loot list. Only crates and quests are supported
+SF GetLootListItemIdByIndex called on an item with no loot list. Only crates and quests are supported
+SF GetLootListItemIdByIndex called on an item with no loot list. Only crates and quests are supported
+SF GetLootListItemIdByIndex called on an item with no loot list. Only crates and quests are supported
+SF GetLootListItemIdByIndex called on an item with no loot list. Only crates and quests are supported
+SF GetLootListItemIdByIndex called on an item with no loot list. Only crates and quests are supported
+SF GetLootListItemIdByIndex called on an item with no loot list. Only crates and quests are supported
+SF GetLootListItemIdByIndex called on an item with no loot list. Only crates and quests are supported
+SF GetLootListItemIdByIndex called on an item with no loot list. Only crates and quests are supported
+SF GetLootListItemIdByIndex called on an item with no loot list. Only crates and quests are supported
+SF GetLootListItemIdByIndex called on an item with no loot list. Only crates and quests are supported
+SF GetLootListItemIdByIndex called on an item with no loot list. Only crates and quests are supported
+SF GetLootListItemIdByIndex called on an item with no loot list. Only crates and quests are supported
+GameTypes: could not find matching game type "".
+Host_WriteConfiguration: Wrote cfg/config.cfg
+Telling Steam not to update the app for the next 900 seconds
+Connecting to public(208.78.165.172:27031) ...
+Server using 'public' lobbies, requiring pw no, lobby id ffffffffffffffff
+Connected to 208.78.165.172:27031
+
+Counter-Strike: Global Offensive
+Map: de_nuke
+Players: 3 (0 bots) / 10 humans
+Build: 6211
+Server Number: 2
+
+SignalXWriteOpportunity(3)
+Got pure server whitelist: sv_pure = 1.
+SignalXWriteOpportunity(3)
+John2143 connected.
+Emily connected.
+Lawdog3463 connected.
+SP00BY connected.
+๒г๏ฬภt๏ฬภ☞™ CSGOSPEED.COM connected.
+Rain connected.
+Player: John2143 - Damage Given
+-------------------------
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "RiD cakekid" - 113 in 2 hits
+Lawdog3463 : i like how u guys got next to each other 
+Lawdog3463 : lol
+๒г๏ฬภt๏ฬภ☞™ CSGOSPEED.COM : Can i join your clan
+Telling Steam not to update the app for the next 900 seconds
+Player: John2143 - Dammage Given to "Da Beast" - 96 in 4 hits
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "Da Beast" - 113 in 2 hits
+Player: John2143 - Damage Given
+-------------------------
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "FaZe Flipflaren" - 107 in 4 hits
+Player: John2143 - Damage Given
+-------------------------
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "Storm^A" - 25 in 1 hit
+Damage Taken from "FaZe Flipflaren" - 75 in 3 hits
+๒г๏ฬภt๏ฬภ☞™ CSGOSPEED.COM : glhf
+RiD cakekid : we will
+๒г๏ฬภt๏ฬภ☞™ CSGOSPEED.COM : Good
+Telling Steam not to update the app for the next 900 seconds
+ConVar did not match any of the options found in data file: cl_crosshaircolor
+ConVar did not match any of the options found in data file: cl_crosshaircolor
+Host_WriteConfiguration: Wrote cfg/config.cfg
+Telling Steam not to update the app for the next 900 seconds
+Player: John2143 - Damage Given
+--------------------7 in 4 hits
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "Lawdog3463" - 102 in 6 hits
+SignalXWriteOpportunity(3)
+Walt connected.
+Unknown command: spec_scoreboard
+Player: John2143 - Damage Given
+-------------------------
+Damage Given to "Lawdog3463" - 47 in 4 hits
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "Lawdog3463" - 102 in 6 hits
+0:  Reinitialized 4 predictable entities
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_paint_splatter
+--- Missing Vgui material vgui/store/store_icon_tf
+Lawdog3463 : love u tbh john
+Tried to look up command say as if it were a variable.
+John2143 : ok
+Telling Steam not to update the app for the next 900 seconds
+Player: John2143 - Damage Given
+-------------------------
+Damage Given to "Lawdog3463" - 26 in 1 hit
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "Lawdog3463" - 85 in 5 hits
+Damage Taken from "FaZe Flipflaren" - 26 in 1 hit
+Da Beast connected.
+Unknown command: spec_scoreboard
+Telling Steam not to update the app for the next 900 seconds
+SignalXWriteOpportunity(3)
+0:  Reinitialized 2 predictable entities
+Player: John2143 - Damage Given
+-------------------------
+Damage Given to "Lawdog3463" - 26 in 1 hit
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "Lawdog3463" - 85 in 5 hits
+Damage Taken from "FaZe Flipflaren" - 26 in 1 hit
+CCSPlayer in solid list (not solid) (2, 0014) models/player/custom_player/legacy/tm_balkan_variantB.mdl
+CCSPlayer in solid list (not solid) (2, 0014) models/player/custom_player/legacy/tm_balkan_variantB.mdl
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_paint_splatter
+--- Missing Vgui material vgui/store/store_icon_tf
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_paint_splatter
+--- Missing Vgui material vgui/store/store_icon_tf
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_paint_splatter
+--- Missing Vgui material vgui/store/store_icon_tf
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_paint_splatter
+--- Missing Vgui material vgui/store/store_icon_tf
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_paint_splatter
+--- Missing Vgui material vgui/store/store_icon_tf
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_paint_splatter
+--- Missing Vgui material vgui/store/store_icon_tf
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_paint_splatter
+--- Missing Vgui material vgui/store/store_icon_tf
+Ernie connected.
+Telling Steam not to update the app for the next 900 seconds
+Player: John2143 - Damage Given
+-------------------------
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "Storm^A" - 107 in 6 hits
+SignalXWriteOpportunity(3)
+0:  Reinitialized 4 predictable entities
+Player: John2143 - Damage Given
+-------------------------
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "Storm^A" - 107 in 6 hits
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_paint_splatter
+--- Missing Vgui material vgui/store/store_icon_tf
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_paint_splatter
+--- Missing Vgui material vgui/store/store_icon_tf
+Telling Steam not to update the app for the next 900 seconds
+Lawdog3463 connected.
+SignalXWriteOpportunity(3)
+Telling Steam not to update the app for the next 900 seconds
+Player: John2143 - Damage Given
+-------------------------
+Damage Given to "RiD cakekid" - 124 in 2 hits
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "World" - 5 in 1 hit
+Damage Taken from "Rain" - 30 in 1 hit
+Lawdog3463 : tbh tropico
+Telling Steam not to update the app for the next 900 seconds
+Player: John2143 - Damage Given
+-------------------------
+Damage Given to "Lawdog3463" - 221 in 3 hits
+Damage Given to "RiD cakekid" - 105 in 3 hits
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "Lawdog3463" - 32 in 2 hits
+Damage Taken from "Storm^A" - 83 in 3 hits
+Unknown command: spec_scoreboard
+SignalXWriteOpportunity(3)
+0:  Reinitialized 2 predictable entities
+Player: John2143 - Damage Given
+-------------------------
+Damage Given to "Lawdog3463" - 221 in 3 hits
+Damage Given to "RiD cakekid" - 105 in 3 hits
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "Lawdog3463" - 32 in 2 hits
+Damage Taken from "Storm^A" - 83 in 3 hits
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_paint_splatter
+--- Missing Vgui material vgui/store/store_icon_tf
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_paint_splatter
+--- Missing Vgui material vgui/store/store_icon_tf
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_paint_splatter
+--- Missing Vgui material vgui/store/store_icon_tf
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_paint_splatter
+--- Missing Vgui material vgui/store/store_icon_tf
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_paint_splatter
+--- Missing Vgui material vgui/store/store_icon_tf
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_paint_splatter
+--- Missing Vgui material vgui/store/store_icon_tf
+Telling Steam not to update the app for the next 900 seconds
+Player: John2143 - Damage Given
+-------------------------
+Damage Given to "Da Beast" - 51 in 2 hits
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "FaZe Flipflaren" - 25 in 2 hits
+Damage Taken from "Da Beast" - 111 in 1 hit
+*DEAD* RiD cakekid : damn
+*DEAD* RiD cakekid : lagging too hard
+Telling Steam not to update the app for the next 900 seconds
+SignalXWriteOpportunity(3)
+[Sound] S_StartSound(): Failed to load sound 'ambient\alarms\alarm_citizen_loop1.wav'. File is missing from disk/repository.
+Player: John2143 - Damage Given
+-------------------------
+Damage Given to "Da Beast" - 51 in 2 hits
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "FaZe Flipflaren" - 25 in 2 hits
+Damage Taken from "Da Beast" - 111 in 1 hit
+0:  Reinitialized 4 predictable entities
+Telling Steam not to update the app for the next 900 seconds
+SignalXWriteOpportunity(3)
+Player: John2143 - Damage Given
+-------------------------
+Damage Given to "Lawdog3463" - 108 in 4 hits
+Damage Given to "RiD cakekid" - 111 in 4 hits
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "World" - 34 in 1 hit
+Telling Steam not to update the app for the next 900 seconds
+Player: John2143 - Damage Given
+-------------------------
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "Storm^A" - 109 in 1 hit
+Telling Steam not to update the app for the next 900 seconds
+Unknown command: spec_scoreboard
+Unknown command: spec_scoreboard
+SignalXWriteOpportunity(3)
+Player: John2143 - Damage Given
+-------------------------
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "Storm^A" - 109 in 1 hit
+0:  Reinitialized 4 predictable entities
+RiD cakekid : this mother fucker never dies
+SP00BY : this motherfucker died 5 times
+Telling Steam not to update the app for the next 900 seconds
+*DEAD* Storm^A : ns
+Player: John2143 - Damage Given
+-------------------------
+Damage Given to "Da Beast" - 25 in 1 hit
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "World" - 2 in 1 hit
+Damage Taken from "FaZe Flipflaren" - 122 in 4 hits
+SignalXWriteOpportunity(3)
+Unknown command: spec_scoreboard
+Player: John2143 - Damage Given
+-------------------------
+Damage Given to "Da Beast" - 25 in 1 hit
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "World" - 2 in 1 hit
+Damage Taken from "FaZe Flipflaren" - 122 in 4 hits
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_paint_splatter
+--- Missing Vgui material vgui/store/store_icon_tf
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_paint_splatter
+--- Missing Vgui material vgui/store/store_icon_tf
+Telling Steam not to update the app for the next 900 seconds
+Player: John2143 - Damage Given
+-------------------------
+Damage Given to "Lawdog3463" - 89 in 5 hits
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "Lawdog3463" - 52 in 2 hits
+Damage Taken from "Storm^A" - 109 in 1 hit
+*DEAD* RiD cakekid : lmao k
+SignalXWriteOpportunity(3)
+0:  Reinitialized 2 predictable entities
+Telling Steam not to update the app for the next 900 seconds
+Player: John2143 - Damage Given
+-------------------------
+Damage Given to "Lawdog3463" - 89 in 5 hits
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "Lawdog3463" - 52 in 2 hits
+Damage Taken from "Storm^A" - 109 in 1 hit
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_paint_splatter
+--- Missing Vgui material vgui/store/store_icon_tf
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_paint_splatter
+--- Missing Vgui material vgui/store/store_icon_tf
+Player: John2143 - Damage Given
+-------------------------
+Damage Given to "Emily" - 36 in 1 hit
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "Emily" - 7 in 1 hit
+Damage Taken from "Storm^A" - 137 in 1 hit
+SignalXWriteOpportunity(3)
+0:  Reinitialized 2 predictable entities
+Telling Steam not to update the app for the next 900 seconds
+Player: John2143 - Damage Given
+-------------------------
+Damage Given to "Emily" - 36 in 1 hit
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "Emily" - 7 in 1 hit
+Damage Taken from "Storm^A" - 137 in 1 hit
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_paint_splatter
+--- Missing Vgui material vgui/store/store_icon_tf
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_paint_splatter
+--- Missing Vgui material vgui/store/store_icon_tf
+Telling Steam not to update the app for the next 900 seconds
+Player: John2143 - Damage Given
+-------------------------
+Damage Given to "Lawdog3463" - 41 in 1 hit
+Damage Given to "Da Beast" - 49 in 1 hit
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "Lawdog3463" - 45 in 2 hits
+Damage Taken from "RiD cakekid" - 61 in 3 hits
+SignalXWriteOpportunity(3)
+Player: John2143 - Damage Given
+-------------------------
+Damage Given to "Lawdog3463" - 41 in 1 hit
+Damage Given to "Da Beast" - 49 in 1 hit
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "Lawdog3463" - 45 in 2 hits
+Damage Taken from "RiD cakekid" - 61 in 3 hits
+0:  Reinitialized 4 predictable entities
+Player: John2143 - Damage Given
+-------------------------
+Damage Given to "Da Beast" - 134 in 1 hit
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "FaZe Flipflaren" - 106 in 4 hits
+Telling Steam not to update the app for the next 900 seconds
+SignalXWriteOpportunity(3)
+0:  Reinitialized 2 predictable entities
+Player: John2143 - Damage Given
+-------------------------
+Damage Given to "Da Beast" - 134 in 1 hit
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "FaZe Flipflaren" - 106 in 4 hits
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_paint_splatter
+--- Missing Vgui material vgui/store/store_icon_tf
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_paint_splatter
+--- Missing Vgui material vgui/store/store_icon_tf
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_paint_splatter
+--- Missing Vgui material vgui/store/store_icon_tf
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_paint_splatter
+--- Missing Vgui material vgui/store/store_icon_tf
+FaZe Flipflaren : I'll have you know I smoke 1 kilo of memes daily.
+Rain : i take steroids every day
+Player: John2143 - Damage Given
+-------------------------
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "FaZe Flipflaren" - 106 in 4 hits
+Telling Steam not to update the app for the next 900 seconds
+*DEAD* RiD cakekid : is my team even shooting at you guys when you take site?
+SignalXWriteOpportunity(3)
+*DEAD* Da Beast : lool a kit was just next to him
+*DEAD* ๒г๏ฬภt๏ฬภ☞™ CSGOSPEED.COM : Sometimes
+Player: John2143 - Damage Given
+-------------------------
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "FaZe Flipflaren" - 106 in 4 hits
+0:  Reinitialized 5 predictable entities
+Telling Steam not to update the app for the next 900 seconds
+--- Missing Vgui mak_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_paint_splatter
+--- Missing Vgui material vgui/store/store_icon_tf
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_paint_splatter
+--- Missing Vgui material vgui/store/store_icon_tf
+Player: John2143 - Damage Given
+-------------------------
+Damage Given to "Da Beast" - 34 in 1 hit
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "FaZe Flipflaren" - 45 in 1 hit
+Damage Taken from "Da Beast" - 56 in 2 hits
+Damage Taken from "Lawdog3463" - 22 in 1 hit
+SignalXWriteOpportunity(3)
+0:  Reinitialized 2 predictable entities
+Tried to look up command say as if it were a variable.
+*DEAD* Lawdog3463 : gh
+*DEAD* John2143 : gh
+*DEAD* ๒г๏ฬภt๏ฬภ☞™ CSGOSPEED.COM : gh
+*DEAD* FaZe Flipflaren : gh
+Storm^A : gh
+*DEAD* SP00BY : gh
+: i need a gun
+Player: John2143 - Damage Given
+-------------------------
+Damage Given to "Da Beast" - 34 in 1 hit
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "FaZe Flipflaren" - 45 in 1 hit
+Damage Taken from "Da Beast" - 56 in 2 hits
+Damage Taken from "Lawdog3463" - 22 in 1 hit
+Telling Steam not to update the app for the next 900 seconds
+Da Beast : 4k
+Telling Steam not to update the app for the next 900 seconds
+Player: John2143 - Damage Given
+-------------------------
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "RiD cakekid" - 135 in 3 hits
+Damage Taken from "Storm^A" - 13 in 1 hit
+SignalXWriteOpportunity(3)
+Unknown command: spec_scoreboard
+Player: John2143 - Damage Given
+-------------------------
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "RiD cakekid" - 135 in 3 hits
+Damage Taken from "Storm^A" - 13 in 1 hit
+0:  Reinitialized 4 predictable entities
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_paint_splatter
+--- Missing Vgui material vgui/store/store_icon_tf
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_paint_splatter
+--- Missing Vgui material vgui/store/store_icon_tf
+Telling Steam not to update the app for the next 900 seconds
+SignalXWriteOpportunity(3)
+Player: John2143 - Damage Given
+-------------------------
+Damage Given to "FaZe Flipflaren" - 116 in 2 hits
+Damage Given to "Storm^A" - 24 in 1 hit
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "Storm^A" - 73 in 5 hits
+Damage Taken from "RiD cakekid" - 30 in 3 hits
+0:  Reinitialized 4 predictable entities
+Player: John2143 - Damage Given
+-------------------------
+Damage Given to "FaZe Flipflaren" - 116 in 2 hits
+Damage Given to "Storm^A" - 24 in 1 hit
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "Storm^A" - 73 in 5 hits
+Damage Taken from "RiD cakekid" - 30 in 3 hits
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_paint_splatter
+--- Missing Vgui material vgui/store/store_icon_tf
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_modify_target_b_g
+--- Missing Vgui material vgui/backpack_jewel_paint_splatter
+--- Missing Vgui material vgui/store/store_icon_tf
+Telling Steam not to update the app for the next 900 seconds
+Player: John2143 - Damage Given
+-------------------------
+Damage Given to "Storm^A" - 22 in 1 hit
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "World" - 21 in 1 hit
+Damage Taken from "Storm^A" - 14 in 1 hit
+Damage Taken from "Da Beast" - 72 in 3 hits
+*DEAD* Storm^A : got it from behind
+*DEAD* RiD cakekid : kid couldn't lag any harder
+*DEAD* RiD cakekid : russian internet
+*DEAD* ๒г๏ฬภt๏ฬภ☞™ CSGOSPEED.COM : Cyka
+Unknown command: spec_scoreboard
+*DEAD* ๒г๏ฬภt๏ฬภ☞™ CSGOSPEED.COM : Blyat.
+SP00BY : Dem $5000% headset that can hear the enemy's computer fan
+*DEAD* ๒г๏ฬภt๏ฬภ☞™ CSGOSPEED.COM : Kiska
+Telling Steam not to update the app for the next 900 seconds
+*DEAD* RiD cakekid : make a sentence, gypsy
+*DEAD* Storm^A : good i want those
+SignalXWriteOpportunity(3)
+Player: John2143 - Dama^A" - 22 in 1 hit
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "World" - 21 in 1 hit
+Damage Taken from "Storm^A" - 14 in 1 hit
+Damage Taken from "Da Beast" - 72 in 3 hits
+0:  Reinitialized 4 predictable entities
+๒г๏ฬภt๏ฬภ☞™ CSGOSPEED.COM : Cyka Blyat Kiska.
+RiD cakekid : those aren't sentences
+SP00BY : Dem $5000% headset that can hear the enemy's computer fan
+RiD cakekid : DEAD =(e)= Rupture. : Christians dont believe in other planets
+*DEAD* ๒г๏ฬภtelling Steam not to update the app for the next 900 seconds
+Player: John2143 - Damage Given
+-------------------------
+Damage Given to "Lawdog3463" - 52 in 2 hits
+Player: John2143 - Damage Taken
+-------------------------
+Damage Taken from "Lawdog3463" - 254 in 1 hit
+Lawdog3463 : lag tbh
+SignalXWriteOpportunity(3)

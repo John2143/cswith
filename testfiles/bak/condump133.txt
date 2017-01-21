@@ -1,0 +1,21 @@
+hostname: Valve CS:GO US SouthEast Server (srcds075.125.20)
+version : 1.35.3.0 secure
+udp/ip  : 162.254.199.79:27034
+os      :  Linux
+type    :  official dedicated
+map     : de_overpass
+players : 9 humans, 1 bots (10/10 max) (not hibernating)
+
+# userid name uniqueid connected ping loss state rate
+#  3 2 "The Third Wave" STEAM_1:0:18832946 26:13 62 0 active 80000
+#  4 3 "Lucky" STEAM_1:0:140921330 26:13 63 0 active 80000
+#  5 4 "Johncool" STEAM_1:1:33556338 26:13 60 0 active 80000
+#  7 6 "StickySativa" STEAM_1:1:52454457 26:13 57 0 active 80000
+#  8 7 "Tomcool" STEAM_1:0:56255760 26:13 116 0 active 128000
+#23 "Bert" BOT active 64
+# 10 9 "FaZe ✪ Lil Brown.Kinguin" STEAM_1:0:60730775 26:13 97 0 active 80000
+# 11 10 "Orbsa" STEAM_1:0:33228181 26:13 88 0 active 80000
+# 12 11 "Haru (trading)" STEAM_1:1:90896163 26:13 60 0 active 80000
+# 24 12 "Legally Blind" STEAM_1:1:54435948 16:19 63 0 active 80000
+#end
+] condump

@@ -1,0 +1,22 @@
+hostname: Valve CS:GO US SouthEast Server (srcds056.125.2)
+version : 1.35.3.0 secure
+udp/ip  : 162.254.199.60:27016
+os      :  Linux
+type    :  official dedicated
+map     : de_mirage
+players : 10 humans, 0 bots (10/10 max) (not hibernating)
+
+# userid name uniqueid connected ping loss state rate
+#  4 2 "Juan Dad" STEAM_1:1:118531707 09:57 75 0 active 80000
+#  5 3 "Pulse" STEAM_1:1:150150309 09:57 59 0 active 80000
+#  6 4 "Willis | kickback.com" STEAM_1:0:46707305 09:57 62 0 active 80000
+#  7 5 "RuSki MeiSteR" STEAM_1:0:149180315 09:57 145 0 active 80000
+#  8 6 "Sangill" STEAM_1:1:82991746 09:57 141 0 active 80000
+#  9 7 "Johncool" STEAM_1:1:33556338 09:57 58 0 active 80000
+# 10 8 "SwetcH =DDD!" STEAM_1:1:46792022 09:57 148 0 active 80000
+# 11 9 "Kappa" STEAM_1:1:52574475 09:57 153 0 active 80000
+# 12 10 "Sewos 1337" STEAM_1:1:45131659 09:57 142 0 active 80000
+# 13 11 "Cyril" STEAM_1:0:47477008 09:57 56 0 active 80000
+#end
+Telling Steam not to update the app for the next 900 seconds
+] condump

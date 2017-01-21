@@ -1,0 +1,22 @@
+] status
+hostname: Valve CS:GO US SouthWest Server (srcds046.115.41)
+version : 1.35.4.5 secure
+udp/ip  : 162.254.194.65:27055
+os      :  Linux
+type    :  official dedicated
+map     : de_mirage
+players : 10 humans, 0 bots (10/10 max) (not hibernating)
+
+# userid name uniqueid connected ping loss state rate
+#  3 2 "Shadow They Know me the Hedgehog" STEAM_1:0:159053582 03:53 104 0 active 128000
+#  4 3 "LazerDatDaD :9)" STEAM_1:0:91047551 03:52 56 0 active 80000
+#  5 4 "McCree" STEAM_1:0:32123332 03:52 64 0 active 80000
+#  6 5 ":[" STEAM_1:0:149798172 03:52 69 0 active 80000
+#  7 6 "Blasting Drake in the background" STEAM_1:1:80842585 03:52 97 0 active 80000
+#  8 7 "SP00BY" STEAM_1:1:43556013 03:52 94 0 active 80000
+# 13 8 "Dsstar" STEAM_1:0:44155793 03:48 109 0 active 80000
+# 10 9 "Jim" STEAM_1:0:52356377 03:52 64 0 active 128000
+# 23 10 "John2143" STEAM_1:1:33556338 02:48 94 0 active 80000
+# 12 11 "Ernie CS.MONEY" STEAM_1:1:81874292 03:52 107 0 active 80000
+#end
+] condump

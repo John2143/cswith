@@ -1,0 +1,29 @@
+{
+  "name": "cswith3",
+  "version": "3.0.0",
+  "description": "Show mm info",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha test.js",
+    "build": "babel serv --out-dir c"
+  },
+  "keywords": [
+    "counterstrike",
+    "matchmaking"
+  ],
+  "author": "John2143",
+  "license": "GPL-3.0+",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "jshint": "^2.9.4",
+    "mocha": "^3.2.0"
+  },
+  "dependencies": {
+    "babel-preset-es2017": "^6.22.0",
+    "bluebird": "^3.4.7",
+    "socket.io": "^1.7.2",
+    "watchr": "^3.0.1"
+  }
+}

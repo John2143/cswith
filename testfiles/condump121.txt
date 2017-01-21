@@ -1,0 +1,22 @@
+] ;status
+hostname: Valve CS:GO US East Server (srcds136.122.56)
+version : 1.35.1.1/13511 6211 secure  
+udp/ip  : 208.78.165.59:27070
+os      :  Linux
+type    :  official dedicated
+map     : de_cache
+players : 10 humans, 0 bots (10/10 max) (not hibernating)
+
+# userid name uniqueid connected ping loss state rate
+#  3 2 "GlowSticks" STEAM_1:1:64312632 06:51 60 0 active 80000
+#  4 3 "John2143" STEAM_1:1:33556338 06:51 46 0 active 80000
+#  5 4 "JUAN CENA" STEAM_1:0:8059293 06:51 47 0 active 80000
+#  6 5 "Emily" STEAM_1:1:49690576 06:51 62 0 active 80000
+#  7 6 "DjSamGhale - BAD ENGLISH" STEAM_1:0:102634443 06:51 125 1 active 128000
+#  8 7 "InstaNt" STEAM_1:1:43858546 06:51 67 0 active 80000
+#  9 8 "Sympho" STEAM_1:1:51847243 06:50 59 0 active 80000
+# 10 9 "Osama Bin Laden" STEAM_1:1:127705714 06:50 140 0 active 80000
+# 11 10 "Glock in my rari" STEAM_1:0:120220617 06:50 82 0 active 80000
+# 12 11 "Carson" STEAM_1:0:78854719 06:50 79 0 active 80000
+#end
+] condump

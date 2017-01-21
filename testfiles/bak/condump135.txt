@@ -1,0 +1,21 @@
+hostname: Valve CS:GO US East Server (srcds100.124.45)
+version : 1.35.3.0 secure
+udp/ip  : 208.78.166.119:27059
+os      :  Linux
+type    :  official dedicated
+map     : de_mirage
+players : 10 humans, 0 bots (10/10 max) (not hibernating)
+
+# userid name uniqueid connected ping loss state rate
+#  4 2 "Goodguy" STEAM_1:0:39580244 00:40 49 0 active 80000
+#  5 3 "Doughnut" STEAM_1:1:17459379 00:40 61 0 active 80000
+#  6 4 "Sadd Slugg" STEAM_1:1:57122919 00:40 45 0 active 80000
+#  7 5 "I am a waifu" STEAM_1:1:130053719 00:40 53 0 active 128000
+#  8 6 "✪ Noodle2K" STEAM_1:1:98919535 00:40 65 0 active 80000
+#  9 7 "Johncool" STEAM_1:1:33556338 00:40 36 0 active 80000
+# 10 8 "Tomcool" STEAM_1:0:56255760 00:40 117 0 active 128000
+# 11 9 "riceb0i" STEAM_1:1:82997323 00:40 41 0 active 80000
+# 12 10 "when na beats eu" STEAM_1:1:91015032 00:39 79 0 active 80000
+# 13 11 "FaZe ✪ Lil Brown.Kinguin" STEAM_1:0:60730775 00:39 108 0 active 80000
+#end
+] condump 

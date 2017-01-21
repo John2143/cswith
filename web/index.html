@@ -1,0 +1,189 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://use.fontawesome.com/ed4d2de3d2.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+
+angular.module("app", []).controller("controller", function($scope, $http){
+
+    //Convert the CIDs of friendsIG into references to the actual objects
+    const friendsAsReferences = function(plys){
+        for(let ply of plys) ply.friendsRef = [];
+
+        for(let ply of plys){
+            for(let friendCID of ply.friendsIG){
+                for(let friendref of plys){
+                    if(friendCID === friendref.cid){
+                        ply.friendsRef.push(friendref);
+                    }
+                }
+            }
+        }
+    }
+
+    const banString = function(ply){
+        const bans = ply.bans;
+        let bstr = "";
+
+        if(bans.EconomyBan !== "none")
+            bstr += `Economy ban: ${bans.EconomyBan}\n`;
+        if(bans.NumberOfVACBans > 0)
+            bstr += `Vac bans: ${bans.NumberOfVACBans}\n`;
+        if(bans.NumberOfGameBans > 0)
+            bstr += `Game bans: ${bans.NumberOfGameBans}\n`;
+
+        if(ply.bans.DaysSinceLastBan){
+            if(ply.bans.DaysSinceLastBan < 400)
+                bstr += bans.DaysSinceLastBan + " days";
+            else
+                bstr += $scope.round(bans.DaysSinceLastBan / 365.25, 1) + " years";
+        }
+
+        return bstr === "" ? "No bans" : bstr;
+    }
+
+    const now = Date.now() / 1000;
+    const ageInYears = d => {
+        let time = now - d.getTime() / 1000;
+        const plural = () => time == 1 ? "" : "s";
+
+        time /= 60;
+        time /= 60;
+        time /= 24;
+        time /= 30;
+        time = Math.floor(time);
+        if(time < 12) return $scope.round(time, 0) + " month" + plural();
+        time /= 12;
+        return $scope.round(time, 1) + " year" + plural();
+    };
+
+    const socket = io();
+    $scope.plys = false;
+    socket.on("plys", function(plys){
+        $scope.loaded = true;
+        console.log("plys get, ", plys);
+        if(!plys) return;
+        friendsAsReferences(plys);
+
+        for(let ply of plys){
+            ply.banString = banString(ply);
+
+            ply.isPrivate = ply.summary.communityvisibilitystate !== 3;
+            if(ply.isPrivate) continue;
+            ply.dateCreated = new Date(ply.summary.timecreated * 1000);
+            ply.timeCreated = ageInYears(ply.dateCreated);
+            ply.playtime = $scope.readable(ply.stats.total_time_played / 60 / 60) + " hours";
+        }
+
+        $scope.plys = plys;
+        $scope.$apply();
+    });
+
+    $scope.readable = x => {
+        if(!x) return "";
+        if(x < 1000) return x.toFixed(0);
+        x /= 1000;
+        if(x < 10) return x.toFixed(1) + "k";
+        return x.toFixed(0) + "k";
+    };
+
+    $scope.round = (num, precision = 2) => num.toFixed(precision);
+});
+
+        </script>
+        <style>
+
+.friendpreview{
+    width: 20px;
+    height: 20px;
+}
+
+.stack1{background-color: #b07d7d;}
+.stack2{background-color: #a8b07d;}
+.stack3{background-color: #7db080;}
+.stack4{background-color: #817db0;}
+.stack5{background-color: #ad7db0;}
+.stack100{background-color: #eee;}
+
+.private{
+    background-color: #e88;
+    text-align: center;
+}
+
+table, th, td{
+    border: 2px solid grey;
+}
+
+th, td{
+    padding: 4px;
+}
+
+tbody{
+    vertical-align: middle;
+}
+
+        </style>
+    </head>
+    <body>
+        <div ng-app="app" ng-controller="controller">
+            <div ng-if="loaded == false">Loading...</div>
+            <div ng-if="loaded == true && plys == false">No match data loaded.</div>
+            <table ng-if="plys" class="table">
+                <thead>
+                    <th>Avatar</th>
+                    <th>Name</th>
+                    <th>Location</th>
+                    <th>Bans</th>
+                    <th>Friends</th>
+                    <th>K/D</th>
+                    <th>KDR/HS%</th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="ply in plys | orderBy:'groupid'">
+                        <td style="width: 5px;">
+                            <a href="{{ply.summary.avatarfull}}">
+                                <img src="{{ply.summary.avatarmedium}}">
+                            </a>
+                        </td>
+                        <td>
+                            <a href="{{ply.summary.profileurl}}">
+                                {{ply.name}}
+                            </a>
+                            <br>
+                            {{ply.timeCreated}}<br>
+                            {{ply.playtime}}
+                        </td>
+                        <td>
+                            {{ply.loc.country}}<br>
+                            {{ply.loc.state}}<br>
+                            {{ply.loc.city}}<br>
+                            {{ply.loc.coordinates}}
+                        </td>
+                        <td>
+                            {{ply.banString}}
+                        </td>
+                        <td class="stack{{ply.groupid}}">
+                            <div ng-repeat="friend in ply.friendsRef">
+                                <img src="{{friend.summary.avatar}}" class="friendpreview">
+                                {{friend.name}}
+                            </div>
+                        </td>
+                        <td colspan="99" ng-if="ply.isPrivate" class="private">
+                            Private
+                        </td>
+                        <td ng-if="!ply.isPrivate">
+                            {{readable(ply.stats.total_kills)}}<br>
+                            {{readable(ply.stats.total_deaths)}}<br>
+                        </td>
+                        <td ng-if="!ply.isPrivate">
+                            {{round(ply.stats.total_kills/ply.stats.total_deaths)}}<br>
+                            {{round(ply.stats.total_kills_headshot/ply.stats.total_kills * 100, 0)}}%
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

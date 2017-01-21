@@ -1,0 +1,22 @@
+] status
+hostname: Valve CS:GO US West Server (srcds099.115.38)
+version : 1.35.0.9/13509 6171 secure  
+udp/ip  : 162.254.194.118:27052
+os      :  Linux
+type    :  official dedicated
+map     : de_cache
+players : 10 humans, 0 bots (10/10 max) (not hibernating)
+
+# userid name uniqueid connected ping loss state rate
+#  3 2 "Dsstar" STEAM_1:0:44155793 01:09 123 0 active 80000
+#  4 3 "bleed" STEAM_1:0:14978190 01:09 39 0 active 80000
+#  5 4 "Dwight Schrute" STEAM_1:1:48622260 01:09 48 0 active 80000
+#  6 5 "SP00BY" STEAM_1:1:43556013 01:09 96 0 active 80000
+#  7 6 "John2143" STEAM_1:1:33556338 01:09 105 0 active 80000
+#  8 7 "Emily" STEAM_1:1:49690576 01:09 94 0 active 80000
+#  9 8 "Rumble/Boulder" STEAM_1:1:1950371 01:09 62 0 active 128000
+# 10 9 "ƒ⌠σσƒ" STEAM_1:0:117893571 01:09 82 0 active 80000
+# 11 10 "Radioactivedust" STEAM_1:0:60738472 01:08 55 0 active 80000
+# 12 11 "Thunder" STEAM_1:0:91173496 01:08 136 0 active 128000
+#end
+] condump
