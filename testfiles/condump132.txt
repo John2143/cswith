@@ -1,22 +1,20 @@
-hostname: Valve CS:GO US SouthEast Server (srcds056.125.2)
-version : 1.35.3.0 secure
-udp/ip  : 162.254.199.60:27016
+ hostname: X-Law's #6 5v5 | !ws | !knife | Competitive | 128 Tick [EZhop]
+version : 1.35.6.5 secure
+udp/ip  : 66.85.80.231:27025
 os      :  Linux
-type    :  official dedicated
+type    :  community dedicated
 map     : de_mirage
-players : 10 humans, 0 bots (10/10 max) (not hibernating)
+players : 10 humans, 0 bots (10/0 max) (not hibernating)
 
 # userid name uniqueid connected ping loss state rate
-#  4 2 "Juan Dad" STEAM_1:1:118531707 09:57 75 0 active 80000
-#  5 3 "Pulse" STEAM_1:1:150150309 09:57 59 0 active 80000
-#  6 4 "Willis | kickback.com" STEAM_1:0:46707305 09:57 62 0 active 80000
-#  7 5 "RuSki MeiSteR" STEAM_1:0:149180315 09:57 145 0 active 80000
-#  8 6 "Sangill" STEAM_1:1:82991746 09:57 141 0 active 80000
-#  9 7 "Johncool" STEAM_1:1:33556338 09:57 58 0 active 80000
-# 10 8 "SwetcH =DDD!" STEAM_1:1:46792022 09:57 148 0 active 80000
-# 11 9 "Kappa" STEAM_1:1:52574475 09:57 153 0 active 80000
-# 12 10 "Sewos 1337" STEAM_1:1:45131659 09:57 142 0 active 80000
-# 13 11 "Cyril" STEAM_1:0:47477008 09:57 56 0 active 80000
+# 642 1 "pUSHER Gaming" STEAM_1:0:14491076 31:29 168 0 active 196608
+# 637 2 "✪ _chaRcoaL" STEAM_1:1:78041282 43:24 59 0 active 128000
+# 635 3 "Jamenmeister #th4n" STEAM_1:1:179073819 47:30 182 0 active 196608
+# 649 4 "TheLegend420" STEAM_1:0:170460406 04:37 135 0 active 196608
+# 650 5 "L3GACY" STEAM_1:0:91408199 04:12 60 0 active 196608
+# 630 6 "✪ m0nster-bmtv-" STEAM_1:1:89216702 56:17 87 0 active 300000
+# 648 7 "The Diddler" STEAM_1:1:117966663 16:28 57 0 active 196608
+# 651 8 "Lil Brown" STEAM_1:0:60730775 02:17 55 0 active 128000
+# 636 9 "nissemeister </3" STEAM_1:1:182497071 47:06 176 0 active 786432
+# 618 10 "NoNamer" STEAM_1:0:129375850  1:14:24 100 0 active 196608
 #end
-Telling Steam not to update the app for the next 900 seconds
-] condump

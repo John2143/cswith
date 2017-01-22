@@ -4,7 +4,8 @@
   "description": "Show mm info",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node c",
+	"test2": "node index",
     "test": "mocha test.js",
     "build": "babel serv --out-dir c"
   },
@@ -18,9 +19,11 @@
     "chai": "^3.5.0",
     "chai-as-promised": "^6.0.0",
     "jshint": "^2.9.4",
-    "mocha": "^3.2.0"
+    "mocha": "^3.2.0",
+    "source-map-support": "^0.4.10"
   },
   "dependencies": {
+    "babel-preset-es2015": "^6.22.0",
     "babel-preset-es2017": "^6.22.0",
     "bluebird": "^3.4.7",
     "socket.io": "^1.7.2",

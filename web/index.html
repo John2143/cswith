@@ -28,11 +28,11 @@ angular.module("app", []).controller("controller", function($scope, $http){
         let bstr = "";
 
         if(bans.EconomyBan !== "none")
-            bstr += `Economy ban: ${bans.EconomyBan}\n`;
+            bstr += `Economy ban: ${bans.EconomyBan}<br>`;
         if(bans.NumberOfVACBans > 0)
-            bstr += `Vac bans: ${bans.NumberOfVACBans}\n`;
+            bstr += `Vac bans: ${bans.NumberOfVACBans}<br>`;
         if(bans.NumberOfGameBans > 0)
-            bstr += `Game bans: ${bans.NumberOfGameBans}\n`;
+            bstr += `Game bans: ${bans.NumberOfGameBans}<br>`;
 
         if(ply.bans.DaysSinceLastBan){
             if(ply.bans.DaysSinceLastBan < 400)
@@ -64,7 +64,7 @@ angular.module("app", []).controller("controller", function($scope, $http){
     socket.on("plys", function(plys){
         $scope.loaded = true;
         console.log("plys get, ", plys);
-        if(!plys) return;
+        if(!plys) return $scope.$apply();
         friendsAsReferences(plys);
 
         for(let ply of plys){
@@ -90,6 +90,7 @@ angular.module("app", []).controller("controller", function($scope, $http){
     };
 
     $scope.round = (num, precision = 2) => num.toFixed(precision);
+    window.scoop = $scope;
 });
 
         </script>
@@ -129,7 +130,7 @@ tbody{
     <body>
         <div ng-app="app" ng-controller="controller">
             <div ng-if="loaded == false">Loading...</div>
-            <div ng-if="loaded == true && plys == false">No match data loaded.</div>
+            <div ng-if="loaded && !plys">No match data loaded.</div>
             <table ng-if="plys" class="table">
                 <thead>
                     <th>Avatar</th>
@@ -161,16 +162,15 @@ tbody{
                             {{ply.loc.city}}<br>
                             {{ply.loc.coordinates}}
                         </td>
-                        <td>
-                            {{ply.banString}}
-                        </td>
+                        <td ng-bind-html="ply.banString"></td>
                         <td class="stack{{ply.groupid}}">
                             <div ng-repeat="friend in ply.friendsRef">
                                 <img src="{{friend.summary.avatar}}" class="friendpreview">
                                 {{friend.name}}
                             </div>
                         </td>
-                        <td colspan="99" ng-if="ply.isPrivate" class="private">
+
+                        <td colspan="2" ng-if="ply.isPrivate" class="private">
                             Private
                         </td>
                         <td ng-if="!ply.isPrivate">
@@ -180,6 +180,13 @@ tbody{
                         <td ng-if="!ply.isPrivate">
                             {{round(ply.stats.total_kills/ply.stats.total_deaths)}}<br>
                             {{round(ply.stats.total_kills_headshot/ply.stats.total_kills * 100, 0)}}%
+                        </td>
+
+                        <td colspan="1" ng-if="!ply.hasGSI" class="private">
+                            No GSI
+                        </td>
+                        <td ng-if="ply.hasGSI">
+
                         </td>
                     </tr>
                 </tbody>
